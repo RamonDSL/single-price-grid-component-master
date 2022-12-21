@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px 'Karla', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(204, 43%, 93%);
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px;
+}
+
+div.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 0px 0px 14px 7px rgba(0, 0, 0, 0.226);
+    max-width: 550px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+div.item {
+    padding: 30px;
+}
+div.item.item-1 {
+    background-color: white;
+}
+div.item.item-1 > h2 {
+    color: hsl(179, 62%, 43%);
+    font-weight: 700;
+    font-size: 1.5rem;    
+}
+div.item.item-1 > h3 {
+    color: hsl(71, 73%, 54%);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 20px 0px;
+}
+div.item.item-1 > p {
+    color: hsl(218, 22%, 67%);
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+div.item.item-2 {
+    background-color: hsl(179, 62%, 43%);
+    color: white;
+}
+div.item.item-2 > h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+div.item.item-2 > p {
+    margin-bottom: 5px;
+}
+div.item.item-2 > p > span{
+    font-size: 2rem;
+    font-weight: 700;
+}
+div.item.item-2 > a {
+    display: block;
+    padding: 20px;
+    margin-top: 30px;
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    background-color: hsl(71, 73%, 54%);
+    border-radius: 5px;
+    box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.281);
+}
+div.item.item-2 > a:hover {
+    background-color: hsl(71, 62%, 46%);
+    font-weight: 700;
+}
+
+div.item.item-3 {
+    background-color: #4abebd;
+}
+div.item.item-3 > h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+div.item.item-3 > p {
+    padding-top: 20px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+footer {
+    background-color: hsl(204, 43%, 93%);
+    padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    div.container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div.item.item-1 {
+        grid-area: 1/ 1/ 2/ 3;
+    }
+
+    div.item.item-2,
+    div.item.iem-3 {
+        grid-area: 2;
+    }
+}
